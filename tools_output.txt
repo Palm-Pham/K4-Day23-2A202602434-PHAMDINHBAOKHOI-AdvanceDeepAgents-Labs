@@ -1,0 +1,17 @@
+== arxiv_search
+[{"id": "2610.12468", "url": "https://arxiv.org/abs/2610.12468", "published": "2026-10-08", "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training", "summary": "We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacles: i
+
+== hf_daily_papers
+[{"id": "2610.12242", "url": "https://huggingface.co/papers/2610.12242", "published": "2026-10-08", "title": "TokenRouter: Efficient Serving System for Token-Level LLM Routing", "summary": "Large language model (LLM) routing distributes inference work across different models, advancing the cost-quality Pareto frontier of LLM serving. While coarse-grained routing at the session or query level has b
+
+== hf_search_papers
+NO RESULTS
+
+== web_search
+ERROR: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://mcp.exa.ai/mcp'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+== web_fetch
+ERROR: HTTPStatusError: Client error '429 Too Many Requests' for url 'https://mcp.exa.ai/mcp'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+

@@ -16,7 +16,15 @@ import re
 import random
 
 import httpx  # noqa: F401
+from dotenv import load_dotenv
 from langchain_core.tools import tool
+
+load_dotenv()
+
+try:
+    from exa_py import Exa
+except ImportError:
+    Exa = None
 
 # ---- constants (given) ----
 ARXIV_URL = "https://export.arxiv.org/api/query"  # https only: http answers 301
@@ -49,6 +57,8 @@ def with_retry(fn, *, attempts=5, base=1.0, cap=30.0):
                 if retry_after_header and retry_after_header.isdigit():
                     retry_after = float(retry_after_header)
             elif isinstance(e, httpx.TransportError):
+                retry = True
+            elif "rate limit" in str(e).lower() or "too many requests" in str(e).lower() or "429" in str(e):
                 retry = True
                 
             if not retry or attempt == attempts - 1:
@@ -283,6 +293,48 @@ def _exa_call(method, arguments):
 @tool
 def web_search(query: str, objective: str = "", num_results: int = 5) -> str:
     """Search the web (Exa). Describe the ideal page in natural language. Returns clean text of the top results with URLs."""
+    exa_key = os.environ.get("EXA_API_KEY", "")
+    num_results = max(1, min(num_results, 10))
+
+    if exa_key and Exa is not None:
+        def _do_call():
+            exa = Exa(api_key=exa_key)
+            kwargs = {
+                "type": "auto",
+                "num_results": num_results,
+                "contents": {"highlights": True},
+            }
+            if objective:
+                kwargs["objective"] = objective
+            res = exa.search(query, **kwargs)
+            if not res or not res.results:
+                return "NO RESULTS"
+
+            blocks = []
+            for item in res.results:
+                lines = [
+                    f"Title: {item.title or 'Unknown'}",
+                    f"URL: {item.url}",
+                ]
+                if getattr(item, "published_date", None):
+                    lines.append(f"Published: {item.published_date}")
+                if getattr(item, "author", None):
+                    lines.append(f"Author: {item.author}")
+                if getattr(item, "highlights", None):
+                    hl = "\n".join(item.highlights) if isinstance(item.highlights, list) else str(item.highlights)
+                    lines.append(f"Highlights:\n{hl}")
+                blocks.append("\n".join(lines))
+            return "\n\n---\n\n".join(blocks)
+
+        try:
+            return with_retry(_do_call, attempts=5, cap=60.0)
+        except Exception as e:
+            err_msg = str(e)
+            if exa_key:
+                err_msg = err_msg.replace(exa_key, "***")
+            return f"ERROR: {type(e).__name__}: {err_msg}"
+
+    # Fallback to MCP JSON-RPC protocol if no key or SDK unavailable
     if not objective:
         objective = query
     return _exa_call("web_search_exa", {"query": query, "objective": objective, "numResults": num_results})
@@ -290,6 +342,30 @@ def web_search(query: str, objective: str = "", num_results: int = 5) -> str:
 @tool
 def web_fetch(url: str) -> str:
     """Read the full content of one web page (e.g. an arXiv abstract page) as markdown. Long pages are truncated."""
+    exa_key = os.environ.get("EXA_API_KEY", "")
+
+    if exa_key and Exa is not None:
+        def _do_call():
+            exa = Exa(api_key=exa_key)
+            res = exa.get_contents([url], text=True)
+            if not res or not res.results:
+                return "NO RESULTS"
+            item = res.results[0]
+            text = item.text or ""
+            if len(text) > 12000:
+                text = text[:12000] + "..."
+            title = item.title or "Page"
+            return f"# {title}\nURL: {item.url}\n\n{text}"
+
+        try:
+            return with_retry(_do_call, attempts=5, cap=60.0)
+        except Exception as e:
+            err_msg = str(e)
+            if exa_key:
+                err_msg = err_msg.replace(exa_key, "***")
+            return f"ERROR: {type(e).__name__}: {err_msg}"
+
+    # Fallback to MCP JSON-RPC protocol
     res = _exa_call("web_fetch_exa", {"urls": [url]})
     if not res.startswith("ERROR:") and len(res) > 12000:
         res = res[:12000] + "..."
