@@ -12,27 +12,76 @@ SOURCES = "/tmp/work/research/sources.json"
 
 
 def check(report_text, sources):
-    """Return a list of problem strings (empty list = OK).
-
-    PSEUDO-CODE:
-      problems = []
-      if sources is empty: return ["no sources in sources.json"]
-      for each source entry:
-          n must be an int                       -> problem if not
-          url must start with http:// or https://-> problem if not
-          the same url must not appear twice     -> problem if duplicated
-      split report_text at the heading "## References":
-          body = text before it; if the heading is missing -> problem
-      cited = set of numbers found as [n] in the BODY only (not in the reference list; use a regex)
-      every number in `cited` must exist in sources -> problem "[n] cited but missing from sources.json"
-      every source number must be in `cited`        -> problem "source [n] never cited"
-      the lines of the References section that start with "[n]" (regex) are the reference lines:
-          every source needs exactly ONE reference line (none missing, no number twice, no number that is not a source)
-          each reference line holds exactly ONE http(s) URL and it must equal that source's url
-          (a line bundling several sources under one number is a problem)
-      return problems
-    """
-    raise NotImplementedError("TODO: implement check()")
+    """Return a list of problem strings (empty list = OK)."""
+    import re
+    problems = []
+    if not sources:
+        return ["no sources in sources.json"]
+        
+    seen_urls = set()
+    source_ns = set()
+    for s in sources:
+        n = s.get("n")
+        if not isinstance(n, int):
+            problems.append(f"source n is not an int: {n}")
+        else:
+            source_ns.add(n)
+            
+        url = s.get("url", "")
+        if not url.startswith("http://") and not url.startswith("https://"):
+            problems.append(f"url does not start with http(s)://: {url}")
+        if url in seen_urls:
+            problems.append(f"duplicated url: {url}")
+        seen_urls.add(url)
+        
+    if "## References" not in report_text:
+        problems.append("missing heading '## References'")
+        return problems
+        
+    parts = report_text.split("## References")
+    body = parts[0]
+    references_text = parts[1] if len(parts) > 1 else ""
+    
+    cited = set(int(x) for x in re.findall(r'\[(\d+)\]', body))
+    
+    for c in cited:
+        if c not in source_ns:
+            problems.append(f"[{c}] cited but missing from sources.json")
+            
+    for n in source_ns:
+        if n not in cited:
+            problems.append(f"source [{n}] never cited")
+            
+    ref_lines = [line.strip() for line in references_text.strip().split('\n') if line.strip()]
+    
+    ref_dict = {}
+    for line in ref_lines:
+        match = re.match(r'^\[(\d+)\](.*)', line)
+        if match:
+            n = int(match.group(1))
+            rest = match.group(2)
+            if n in ref_dict:
+                problems.append(f"reference number [{n}] appears twice in reference list")
+            ref_dict[n] = rest
+            if n not in source_ns:
+                problems.append(f"reference list has [{n}] which is not a source")
+                
+    for n in source_ns:
+        if n not in ref_dict:
+            problems.append(f"missing reference line for source [{n}]")
+            continue
+            
+        rest = ref_dict[n]
+        urls_in_line = re.findall(r'https?://[^\s()\]>]+', rest)
+        if len(urls_in_line) != 1:
+            problems.append(f"reference line [{n}] does not have exactly one url")
+        else:
+            url_in_line = urls_in_line[0]
+            source_url = next(s["url"] for s in sources if s["n"] == n)
+            if url_in_line != source_url:
+                problems.append(f"reference line [{n}] url {url_in_line} does not match source url {source_url}")
+                
+    return problems
 
 
 def main(argv):
