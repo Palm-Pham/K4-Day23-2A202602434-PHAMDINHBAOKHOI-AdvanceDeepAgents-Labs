@@ -1,0 +1,162 @@
+[
+  {
+    "n": 1,
+    "id": "DOI 10.1145/3746449",
+    "url": "https://dl.acm.org/doi/10.1145/3746449",
+    "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models",
+    "date": "2025-09-09",
+    "source": "web"
+  },
+  {
+    "n": 2,
+    "id": "arXiv:1803.10122",
+    "url": "https://arxiv.org/abs/1803.10122",
+    "title": "World Models",
+    "date": "2018-03-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "arXiv:2301.04104",
+    "url": "https://huggingface.co/papers/2301.04104",
+    "title": "Mastering Diverse Domains through World Models (DreamerV3)",
+    "date": "2024-04-18",
+    "source": "hf-search"
+  },
+  {
+    "n": 4,
+    "id": "arXiv:2405.15083",
+    "url": "https://huggingface.co/papers/2405.15083",
+    "title": "MuDreamer: Learning Predictive World Models without Reconstruction",
+    "date": "2024-05-23",
+    "source": "hf-search"
+  },
+  {
+    "n": 5,
+    "id": "arXiv:2203.04955",
+    "url": "https://ar5iv.labs.arxiv.org/html/2203.04955",
+    "title": "Temporal Difference Learning for Model Predictive Control",
+    "date": "2022",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "arXiv:2405.15223",
+    "url": "https://huggingface.co/papers/2405.15223",
+    "title": "Interactive VideoGPTs are Scalable World Models",
+    "date": "2024-11-01",
+    "source": "hf-search"
+  },
+  {
+    "n": 7,
+    "id": "arXiv:2402.15391",
+    "url": "https://arxiv.org/abs/2402.15391",
+    "title": "Genie: Generative Interactive Environments",
+    "date": "2024-02-23",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "arXiv:2406.09455",
+    "url": "https://huggingface.co/papers/2406.09455",
+    "title": "Pandora: Towards General World Model with Natural Language Actions and Video States",
+    "date": "2024",
+    "source": "hf-search"
+  },
+  {
+    "n": 9,
+    "id": "arXiv:2309.17080",
+    "url": "https://arxiv.org/abs/2309.17080",
+    "title": "GAIA-1: A Generative World Model for Autonomous Driving",
+    "date": "2023",
+    "source": "arxiv"
+  },
+  {
+    "n": 10,
+    "id": "arXiv:2506.04363",
+    "url": "https://arxiv.org/html/2506.04363",
+    "title": "WorldPrediction: A Benchmark for High-level World Modeling and Long-horizon Procedural Planning",
+    "date": "2025-06-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 11,
+    "id": "arXiv:2206.14176",
+    "url": "https://ar5iv.labs.arxiv.org/html/2206.14176",
+    "title": "DayDreamer: World Models for Physical Robot Learning",
+    "date": "2022",
+    "source": "arxiv"
+  },
+  {
+    "n": 12,
+    "id": "arXiv:2404.12377",
+    "url": "https://arxiv.org/html/2404.12377v1",
+    "title": "RoboDreamer: Learning Compositional World Models for Robot Imagination",
+    "date": "2024",
+    "source": "arxiv"
+  },
+  {
+    "n": 13,
+    "id": "arXiv:2506.09985",
+    "url": "https://arxiv.org/html/2506.09985",
+    "title": "V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning",
+    "date": "2025",
+    "source": "arxiv"
+  },
+  {
+    "n": 14,
+    "id": "ICCV 2025 paper",
+    "url": "https://openaccess.thecvf.com/content/ICCV2025/papers/Zheng_World4Drive_End-to-End_Autonomous_Driving_via_Intention-aware_Physical_Latent_World_Model_ICCV_2025_paper.pdf",
+    "title": "World4Drive: End-to-End Autonomous Driving via Intention-aware Physical Latent World Model",
+    "date": "2025",
+    "source": "web"
+  },
+  {
+    "n": 15,
+    "id": "arXiv:2408.14837",
+    "url": "https://arxiv.org/abs/2408.14837",
+    "title": "Diffusion Models Are Real-Time Game Engines (GameNGen)",
+    "date": "2024",
+    "source": "arxiv"
+  },
+  {
+    "n": 16,
+    "id": "arXiv:2502.07825",
+    "url": "https://arxiv.org/abs/2502.07825",
+    "title": "Pre-Trained Video Generative Models as World Simulators",
+    "date": "2025",
+    "source": "arxiv"
+  },
+  {
+    "n": 17,
+    "id": "arXiv:2505.21996",
+    "url": "https://arxiv.org/abs/2505.21996",
+    "title": "VRAG: Learning World Models for Interactive Video Generation",
+    "date": "2025",
+    "source": "arxiv"
+  },
+  {
+    "n": 18,
+    "id": "DeepMind research announcement",
+    "url": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/",
+    "title": "Genie 2: A large-scale foundation world model",
+    "date": "2024-12-04",
+    "source": "web"
+  },
+  {
+    "n": 19,
+    "id": "DeepMind research announcement",
+    "url": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
+    "title": "Genie 3: A new frontier for world models",
+    "date": "2025-08-05",
+    "source": "web"
+  },
+  {
+    "n": 20,
+    "id": "arXiv:2510.05865",
+    "url": "https://arxiv.org/html/2510.05865v1",
+    "title": "The Safety Challenge of World Models for Embodied AI Agents",
+    "date": "2025",
+    "source": "arxiv"
+  }
+]
