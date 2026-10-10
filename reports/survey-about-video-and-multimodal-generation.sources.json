@@ -1,0 +1,210 @@
+[
+  {
+    "n": 1,
+    "id": "arXiv:2401.12945",
+    "url": "https://arxiv.org/abs/2401.12945",
+    "title": "Lumiere: A Space-Time Diffusion Model for Video Generation",
+    "date": "2024-02-05",
+    "source": "web"
+  },
+  {
+    "n": 2,
+    "id": "OpenAI technical report / webpage",
+    "url": "https://openai.com/index/video-generation-models-as-world-simulators/",
+    "title": "Video generation models as world simulators",
+    "date": "2024-02-15",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "arXiv:2312.14125",
+    "url": "https://arxiv.org/abs/2312.14125",
+    "title": "VideoPoet: A Large Language Model for Zero-Shot Video Generation",
+    "date": "2024-06-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "arXiv:2410.13720",
+    "url": "https://arxiv.org/abs/2410.13720",
+    "title": "Movie Gen: A Cast of Media Foundation Models",
+    "date": "2024-10-04",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "arXiv:2412.03603",
+    "url": "https://arxiv.org/abs/2412.03603",
+    "title": "HunyuanVideo: A Systematic Framework For Large Video Generative Models",
+    "date": "2024-12",
+    "source": "web"
+  },
+  {
+    "n": 6,
+    "id": "arXiv:2503.20314",
+    "url": "https://arxiv.org/abs/2503.20314",
+    "title": "Wan: Open and Advanced Large-Scale Video Generative Models",
+    "date": "2025-04-19",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "arXiv:2412.09856",
+    "url": "https://arxiv.org/html/2412.09856",
+    "title": "LinGen: Towards High-Resolution Minute-Length Text-to-Video Generation with Linear Computational Complexity",
+    "date": "2025-05-24",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "arXiv:2402.01566",
+    "url": "https://huggingface.co/papers/2402.01566",
+    "title": "Boximator: Generating Rich and Controllable Motions for Video Synthesis",
+    "date": "2024-02-02",
+    "source": "hf-daily"
+  },
+  {
+    "n": 9,
+    "id": "arXiv:2412.15220",
+    "url": "https://arxiv.org/pdf/2412.15220",
+    "title": "SyncFlow: Toward Temporally Aligned Joint Audio-Video Generation from Text",
+    "date": "2024",
+    "source": "web"
+  },
+  {
+    "n": 10,
+    "id": "CVPR 2025 paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Cheng_MMAudio_Taming_Multimodal_Joint_Training_for_High-Quality_Video-to-Audio_Synthesis_CVPR_2025_paper.pdf",
+    "title": "MMAudio: Taming Multimodal Joint Training for High-Quality Video-to-Audio Synthesis",
+    "date": "2025",
+    "source": "web"
+  },
+  {
+    "n": 11,
+    "id": "arXiv:2503.23377",
+    "url": "https://arxiv.org/html/2503.23377v1",
+    "title": "JavisDiT: Joint Audio-Video Diffusion Transformer with Hierarchical Spatio-Temporal Prior Synchronization",
+    "date": "2025",
+    "source": "web"
+  },
+  {
+    "n": 12,
+    "id": "arXiv:2411.17690",
+    "url": "https://arxiv.org/html/2411.17690v2",
+    "title": "Visatronic: A Multimodal Decoder-Only Model for Speech Synthesis",
+    "date": "2024",
+    "source": "web"
+  },
+  {
+    "n": 13,
+    "id": "NeurIPS 2024 conference paper",
+    "url": "https://papers.nips.cc/paper_files/paper/2024/file/edbeca7811f9365c924c72a8a9bce83a-Paper-Conference.pdf",
+    "title": "Compositional 3D-aware Video Generation with LLM Director",
+    "date": "2024",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "CVPR 2024 paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Yang_PhyScene_Physically_Interactable_3D_Scene_Synthesis_for_Embodied_AI_CVPR_2024_paper.pdf",
+    "title": "PhyScene: Physically Interactable 3D Scene Synthesis for Embodied AI",
+    "date": "2024",
+    "source": "web"
+  },
+  {
+    "n": 15,
+    "id": "CVPR 2024 paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Huang_VBench_Comprehensive_Benchmark_Suite_for_Video_Generative_Models_CVPR_2024_paper.pdf",
+    "title": "VBench: Comprehensive Benchmark Suite for Video Generative Models",
+    "date": "2024",
+    "source": "web"
+  },
+  {
+    "n": 16,
+    "id": "arXiv:2411.13503",
+    "url": "https://arxiv.org/html/2411.13503v1",
+    "title": "VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models",
+    "date": "2024-11",
+    "source": "arxiv"
+  },
+  {
+    "n": 17,
+    "id": "arXiv:2503.21755",
+    "url": "https://arxiv.org/html/2503.21755",
+    "title": "VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic Faithfulness",
+    "date": "2025-03",
+    "source": "arxiv"
+  },
+  {
+    "n": 18,
+    "id": "CVPR 2025 paper",
+    "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Han_Video-Bench_Human-Aligned_Video_Generation_Benchmark_CVPR_2025_paper.pdf",
+    "title": "Video-Bench: Human-Aligned Video Generation Benchmark",
+    "date": "2025",
+    "source": "web"
+  },
+  {
+    "n": 19,
+    "id": "arXiv:2501.08545",
+    "url": "https://arxiv.org/html/2501.08545",
+    "title": "T2VEval: Benchmark Dataset and Objective Evaluation Method for T2V-generated Videos",
+    "date": "2025-01",
+    "source": "web"
+  },
+  {
+    "n": 20,
+    "id": "Google Cloud product announcement",
+    "url": "https://cloud.google.com/blog/products/ai-machine-learning/veo-3-fast-available-for-everyone-on-vertex-ai",
+    "title": "Veo 3 and Veo 3 Fast are now generally available on Vertex AI",
+    "date": "2025-07-29",
+    "source": "web"
+  },
+  {
+    "n": 21,
+    "id": "OpenAI system card (Sora 2)",
+    "url": "https://openai.com/index/sora-2-system-card/",
+    "title": "Sora 2 System Card",
+    "date": "2025-09-30",
+    "source": "web"
+  },
+  {
+    "n": 22,
+    "id": "OpenAI Sora 2 deployment announcement",
+    "url": "https://openai.com/index/launching-sora-responsibly/",
+    "title": "Launching Sora responsibly",
+    "date": "2025-09-30",
+    "source": "web"
+  },
+  {
+    "n": 23,
+    "id": "NeurIPS 2025 Datasets and Benchmarks Track paper",
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2025/file/c8bda0ee8b6bd4c56d9f8bdb3653e7db-Paper-Datasets_and_Benchmarks_Track.pdf",
+    "title": "Video-SafetyBench: A Benchmark for Safety Evaluation of Video LVLMs",
+    "date": "2025",
+    "source": "web"
+  },
+  {
+    "n": 24,
+    "id": "UK Department for Science, Innovation and Technology report",
+    "url": "https://assets.publishing.service.gov.uk/media/69ba692226909a14239612e4/CP2602959_-_Report_on_Copyright_and_Artificial_Intelligence_web.pdf",
+    "title": "Report on Copyright and Artificial Intelligence",
+    "date": "2025",
+    "source": "web"
+  },
+  {
+    "n": 25,
+    "id": "OECD AI policy initiative document",
+    "url": "https://api.oecd.ai/storage/policy-initiatives/Jul2025/fu_mcnha6zunkq49nq.pdf",
+    "title": "DEEPFAKES GUIDELINES",
+    "date": "2025-07",
+    "source": "web"
+  },
+  {
+    "n": 26,
+    "id": "U.S. Copyright Office report, Part 2",
+    "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf?loclr=blogcop",
+    "title": "Copyright and Artificial Intelligence, Part 2: Copyrightability Report",
+    "date": "2025",
+    "source": "web"
+  }
+]
