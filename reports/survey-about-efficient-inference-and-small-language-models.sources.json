@@ -1,0 +1,202 @@
+[
+  {
+    "n": 1,
+    "id": "arXiv:2501.05465",
+    "url": "https://arxiv.org/html/2501.05465",
+    "title": "Small Language Models (SLMs) Can Still Pack a Punch: A Survey",
+    "date": "n.d.",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "IBM Think explainer",
+    "url": "https://www.ibm.com/think/topics/small-language-models",
+    "title": "What are Small Language Models (SLM)?",
+    "date": "2024-11-05",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "arXiv:2210.17323",
+    "url": "https://arxiv.org/abs/2210.17323",
+    "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+    "date": "2022-10-31",
+    "source": "web"
+  },
+  {
+    "n": 4,
+    "id": "arXiv:2307.08691",
+    "url": "https://arxiv.org/html/2307.08691?fallback=original",
+    "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+    "date": "2023-07",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "arXiv:2402.02750",
+    "url": "https://arxiv.org/html/2402.02750",
+    "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
+    "date": "2024-02",
+    "source": "web"
+  },
+  {
+    "n": 6,
+    "id": "arXiv:2309.06180",
+    "url": "https://aiichironakano.github.io/cs653/Kwon-PagedAttention-SOSP23.pdf",
+    "title": "Efficient Memory Management for Large Language Model Serving with PagedAttention",
+    "date": "2023-09",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "Hugging Face blog",
+    "url": "https://huggingface.co/blog/EXDai/llm-inference-benchmarking",
+    "title": "LLM Inference Benchmarking",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "arXiv:2505.16508",
+    "url": "https://arxiv.org/html/2505.16508",
+    "title": "Edge-First Language Model Inference: Models, Metrics, and Tradeoffs",
+    "date": "2025-05",
+    "source": "web"
+  },
+  {
+    "n": 9,
+    "id": "Hugging Face blog",
+    "url": "https://huggingface.co/blog/DataSapien/best-localllm",
+    "title": "DataSapien Lab Report: What’s the Best Local LLM?",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 10,
+    "id": "Microsoft Research blog",
+    "url": "https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/",
+    "title": "Phi-2: The surprising power of small language models",
+    "date": "2023-12-12",
+    "source": "web"
+  },
+  {
+    "n": 11,
+    "id": "arXiv:2404.14219",
+    "url": "https://arxiv.org/abs/2404.14219",
+    "title": "Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone",
+    "date": "2024-04-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 12,
+    "id": "2404.14219",
+    "url": "https://huggingface.co/papers/2404.14219",
+    "title": "Phi-3 Technical Report (Hugging Face Papers entry)",
+    "date": "2024-04-22",
+    "source": "hf-daily"
+  },
+  {
+    "n": 13,
+    "id": "microsoft/Phi-3-mini-4k-instruct",
+    "url": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+    "title": "Phi-3-mini-4k-instruct model card",
+    "date": "2024-06",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "arXiv:2403.08295",
+    "url": "https://arxiv.org/abs/2403.08295",
+    "title": "Gemma: Open Models Based on Gemini Research and Technology",
+    "date": "2024-04-16",
+    "source": "arxiv"
+  },
+  {
+    "n": 15,
+    "id": "google/gemma-2-2b",
+    "url": "https://huggingface.co/google/gemma-2-2b",
+    "title": "google/gemma-2-2b model card",
+    "date": "2024-07",
+    "source": "web"
+  },
+  {
+    "n": 16,
+    "id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+    "title": "Qwen2.5-1.5B-Instruct model card",
+    "date": "n.d.",
+    "source": "web"
+  },
+  {
+    "n": 17,
+    "id": "arXiv:1910.01108",
+    "url": "http://arxiv.org/abs/1910.01108",
+    "title": "DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter",
+    "date": "2019-10-02",
+    "source": "web"
+  },
+  {
+    "n": 18,
+    "id": "arXiv:2306.00978",
+    "url": "https://arxiv.org/html/2306.00978v2",
+    "title": "AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration",
+    "date": "2023-06",
+    "source": "web"
+  },
+  {
+    "n": 19,
+    "id": "arXiv:2306.11695",
+    "url": "https://arxiv.org/pdf/2306.11695",
+    "title": "A Simple and Effective Pruning Approach for Large Language Models (Wanda)",
+    "date": "2023-06",
+    "source": "web"
+  },
+  {
+    "n": 20,
+    "id": "PMLR v202; arXiv:2211.17192",
+    "url": "https://proceedings.mlr.press/v202/leviathan23a.html",
+    "title": "Fast Inference from Transformers via Speculative Decoding",
+    "date": "2023-07-03",
+    "source": "web"
+  },
+  {
+    "n": 21,
+    "id": "OSDI 2022",
+    "url": "https://www.usenix.org/conference/osdi22/presentation/yu",
+    "title": "Orca: A Distributed Serving System for Transformer-Based Generative Models",
+    "date": "2022-07",
+    "source": "web"
+  },
+  {
+    "n": 22,
+    "id": "arXiv:2403.02310",
+    "url": "https://arxiv.org/pdf/2403.02310",
+    "title": "Sarathi-Serve: Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve",
+    "date": "2024-03",
+    "source": "web"
+  },
+  {
+    "n": 23,
+    "id": "arXiv:2409.15790",
+    "url": "https://arxiv.org/abs/2409.15790",
+    "title": "Small Language Models: Survey, Measurements, and Insights",
+    "date": "2025-02-26",
+    "source": "web"
+  },
+  {
+    "n": 24,
+    "id": "arXiv:2404.03353v3",
+    "url": "https://arxiv.org/pdf/2404.03353v3.pdf",
+    "title": "Towards Pareto Optimal Throughput in Small Language Model Serving",
+    "date": "2024-04-04",
+    "source": "web"
+  },
+  {
+    "n": 25,
+    "id": "Hugging Face blog",
+    "url": "https://huggingface.co/blog/rshemet/cactus-on-device-inference",
+    "title": "Cactus: High-Performance AI Inference on Any Smartphone",
+    "date": "2025-10-03",
+    "source": "web"
+  }
+]
