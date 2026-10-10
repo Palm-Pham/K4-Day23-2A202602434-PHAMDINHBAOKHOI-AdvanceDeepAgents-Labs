@@ -103,7 +103,9 @@ def main(topic):
     model_name = getattr(model, "model_name", str(model.__class__.__name__))
     
     start = time.monotonic()
+    print(f"[*] Starting deep research for: {topic}", flush=True)
     with open_sandbox() as backend:
+        print(f"[*] Initialized sandbox at {WORKDIR}", flush=True)
         backend.execute(f"mkdir -p {WORKDIR}/research/notes {WORKDIR}/report")
         upload(backend, {
             VALIDATOR_PATH: VALIDATOR_SOURCE.read_bytes(),
@@ -111,14 +113,45 @@ def main(topic):
         })
         
         agent = build_lead_agent(backend, model)
-        result = agent.invoke(
-            {"messages": [{"role": "user", "content": build_prompt(topic)}]},
-            config={"recursion_limit": 1000}
-        )
+        print("[*] Running lead agent...", flush=True)
+        messages = []
+        seen_tool_ids = set()
         
+        try:
+            for event in agent.stream(
+                {"messages": [{"role": "user", "content": build_prompt(topic)}]},
+                config={"recursion_limit": 1000},
+                stream_mode="values"
+            ):
+                if "messages" in event:
+                    new_msgs = event["messages"]
+                    for msg in new_msgs[len(messages):]:
+                        if hasattr(msg, "tool_calls") and msg.tool_calls:
+                            for tc in msg.tool_calls:
+                                tid = tc.get("id") or str(tc)
+                                if tid not in seen_tool_ids:
+                                    seen_tool_ids.add(tid)
+                                    tname = tc.get("name", "")
+                                    targs = tc.get("args", {})
+                                    if tname == "task":
+                                        sub = targs.get("subagent", "subagent")
+                                        desc = str(targs.get("description") or targs.get("prompt") or targs)[:70]
+                                        print(f"  [+] Delegating subagent [{sub}]: {desc}...", flush=True)
+                                    elif tname == "execute":
+                                        cmd = str(targs.get("command", ""))
+                                        print(f"  [+] Sandbox execute: {cmd[:60]}", flush=True)
+                                    elif tname in ("write_file", "edit_file"):
+                                        path = str(targs.get("path", ""))
+                                        print(f"  [+] File write/edit: {path}", flush=True)
+                                    elif tname == "write_todos":
+                                        print("  [+] Updating research plan / todos...", flush=True)
+                    messages = new_msgs
+        except Exception as exc:
+            print(f"[*] Agent run completed with message: {type(exc).__name__}: {exc}", flush=True)
+            
         elapsed = time.monotonic() - start
         try:
-            report_file = save_outputs(backend, topic, result["messages"], elapsed, model_name)
+            report_file = save_outputs(backend, topic, messages, elapsed, model_name)
         except RuntimeError as e:
             print(f"FAILED: {e}", file=sys.stderr)
             return 1
